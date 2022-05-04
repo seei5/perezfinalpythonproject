@@ -2,6 +2,7 @@
 
 import random
 import math
+import pickle
 from tkinter import *
 from unicodedata import name
 
@@ -14,9 +15,9 @@ users = []
 ### Classes Section
 
 class Admin():
-    def __init__(self):
+    def __init__(self, username):
         self.priv = 'admin'
-        self.username = ''
+        self.username = username
 
     def give_name(self, name):
         self.username = name
@@ -25,15 +26,39 @@ class Admin():
         return self.username
 
 class User():
-    def __init__(self):
+    def __init__(self, username):
         self.priv = 'admin'
-        self.username = ''
+        self.username = username
 
     def give_name(self, name):
         self.username = name
 
     def get_name(self):
         return self.username
+
+### Misc Functions Section
+
+def CreateNewUser(name, usertype):
+    name = str(name)
+    if usertype == 'm':
+        user = User(name)
+        pickle.dump(user, open(name,"wb"))
+    elif usertype == 'a':
+        user = Admin(name)
+        pickle.dump(user, open(name,"wb"))
+
+def ViewUser(name):
+    name = str(name)
+    user = pickle.load(open(name, "rb"))
+    print(user.username)
+
+u_name = input('Input username: ')
+u_type = input('Input user type (m/a): ')
+
+CreateNewUser(u_name, u_type)
+
+u_name2 = input('Input username: ')
+ViewUser(u_name2)
 
 ### GUI Section
 
