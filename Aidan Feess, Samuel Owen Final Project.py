@@ -58,20 +58,22 @@ def ViewUser(name):
 ### GUI Section
 
 root = Tk()
-root.geometry('400x400')
+root.geometry('200x100')
 
-Title = Label(root, text="Aidan and Sam T-Shirts Login Menu")
-Title.place(x=100,y=0)
+Title = Label(root, text="Login")
+Title.place(x=75,y=0)
 
-#u_label = Label(root, text = 'Username')
+u_label = Label(root, text = 'Username:')
+u_label.place(x=0, y=25)
 
-#u_name_box = Entry(root, border=5)
+u_name_box = Entry(root, border=5)
+u_name_box.place(x=65, y=25)
 
+u_type_label = Label(root, text = 'User Type:')
+u_type_label.place(x=0, y=60)
 
-#utype_label = Label(root, text = 'User Type')
-
-#u_type_box = Entry(root, border=5)
-
+u_type_box = Entry(root, border=5)
+u_type_box.place(x=65, y=60)
 
 ###### Functions for recieving and interpreting the values given by text boxes
 #def get_u_name(name):
