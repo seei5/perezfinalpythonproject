@@ -52,32 +52,38 @@ def ViewUser(name):
     user = pickle.load(open(name, "rb"))
     print(user.username)
 
-u_name = input('Input username: ')
-u_type = input('Input user type (m/a): ')
-
-CreateNewUser(u_name, u_type)
-
-u_name2 = input('Input username: ')
-ViewUser(u_name2)
+#CreateNewUser(u_name, u_type) -- takes a username and type (i.e. 'aidan' and 'admin' which would be u_name = 'aidan' and u_type = 'a')
+#ViewUser(u_name2) -- takes a username and outputs information relating to that user
 
 ### GUI Section
 
 root = Tk()
+root.geometry('400x400')
 
 Title = Label(root, text="Aidan and Sam T-Shirts Login Menu")
-Title.pack(side=TOP)
+Title.place(x=100,y=0)
 
-u_label = Label(root, text = 'Username')
-u_label.pack(side=LEFT)
-u_name_box = Entry(root, border=5)
-u_name_box.pack(side=RIGHT)
+#u_label = Label(root, text = 'Username')
+
+#u_name_box = Entry(root, border=5)
+
+
+#utype_label = Label(root, text = 'User Type')
+
+#u_type_box = Entry(root, border=5)
+
 
 ###### Functions for recieving and interpreting the values given by text boxes
-def get_u_name(name):
-    username = u_name_box.get()
-    #for name in 
-    return
+#def get_u_name(name):
+#    username = u_name_box.get()
+#    
+#    return
+#def get_u_type(u_type):
+#    u_type = u_name_box.get()
+#    
+#    return
 
-u_name_box.bind('<Return>', get_u_name)
+#u_name_box.bind('<Return>', get_u_name)
+#u_type_box.bind('<Return>', get_u_type)
 
 root.mainloop()
