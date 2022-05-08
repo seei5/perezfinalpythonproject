@@ -47,7 +47,7 @@ def CreateNewUser(name, usertype):
 
 def CreateNewUserRequest(username):
     name = str(username)
-    file = open('requests.txt', 'w+')
+    file = open('requests.txt', 'a+')
     file.writelines(name+'\n')
 
 def LoginUser(name):
