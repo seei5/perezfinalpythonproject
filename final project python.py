@@ -192,5 +192,7 @@ home_screen()
 
 root.mainloop()
 
-# TODO:     1. Add a user accept screen for the admin users
-#           2. 
+# TODO:     1. Add a user accept screen for the admin users and a screen for orders
+#               1a. Area to approve orders 
+#               1b. Area to create t-shirt designs (list color, a description, and the size)
+#               1c. Area to create bills
