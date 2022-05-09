@@ -143,26 +143,26 @@ def signup_screen():
     u_name_box = Entry(root, border=5)
     u_name_box.place(x=65, y=25)
 
-    u_type_label = Label(root, text = 'User Type:')
-    u_type_label.place(x=0, y=60)
+    user_types = ['Admin','Member']
+    user_var = StringVar()
+    user_var.set(user_types[1])
 
-    u_type_box = Entry(root, border=5)
-    u_type_box.place(x=65, y=60)
+    utype = OptionMenu(root, user_var, *user_types)
+    utype.place(relx=0.5, rely=.45, anchor=CENTER)
 
     back_button = Button(root, text='Back', command=switch_to_home)
     back_button.place(x=5, y=105)
 
-    current_objs.append(u_label)
+    current_objs.append(u_label) # append the tkinter elements to the list for removal later
     current_objs.append(u_name_box)
-    current_objs.append(u_type_label)
-    current_objs.append(u_type_box)
+    current_objs.append(utype)
     current_objs.append(Title)
     current_objs.append(back_button)
 
     # Function binding
     def get_u_name_type():
         username = u_name_box.get()
-        type = u_type_box.get()
+        type = user_var.get()
 
         if username != '' and username != ' ':
             if type.lower() == 'member' or type.lower() == 'admin':
