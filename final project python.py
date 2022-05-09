@@ -38,6 +38,7 @@ class User():
 
 def CreateNewUser(name, usertype):
     name = str(name)
+    usertype=usertype.lower()
     if usertype == 'member':
         user = User(name)
         pickle.dump(user, open(name,"wb"))
