@@ -297,7 +297,7 @@ def logged_in_screen(utype, user):
         def default():
             reset_screen()
 
-            view_types = ['View Requests', 'View Orders', 'Create Designs', 'Create Bill'] # User requests, orders, create designs, create bills
+            view_types = ['View Requests', 'View Orders', 'Create Designs'] # User requests, orders, create designs, create bills
             view_var = StringVar()
             view_var.set(view_types[0])
             
@@ -424,6 +424,8 @@ def logged_in_screen(utype, user):
         appendtolist([user_list, u_list_text, accept, deny, back])
 
     def show_create_designs():
+        back = Button(root, text='Back', command=default)
+        back.place(x=150,y=80, anchor=W)
 
         def make_new_CLORDS():  # CLORDS means Color or Design
             choicetype = choice_var.get()
@@ -446,7 +448,8 @@ def logged_in_screen(utype, user):
         CLORDS_entry.place(anchor=CENTER, relx=.5, rely=.5)
 
         CLORDS_button = Button(root, text='Submit', command=make_new_CLORDS)
-        CLORDS_button.place(anchor=CENTER, relx=.5, rely=.7)    
+        CLORDS_button.place(anchor=CENTER, relx=.5, rely=.7)
+        appendtolist([new_CLORDS,CLORDS_entry,CLORDS_button,back])
 
     def show_tshirt_creator():
         back = Button(root, text='Back', command=default)
