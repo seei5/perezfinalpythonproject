@@ -1,0 +1,6 @@
+Orderer: rose
+Shirts: 200
+Hats: 0
+Price: $650.0
+"('Blue', 'Smiley face')", 'S'
+Status: Pending

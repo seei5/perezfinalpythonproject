@@ -1,0 +1,6 @@
+Orderer: rose
+Shirts: 15
+Hats: 0
+Price: $48.75
+"('Red', 'White checkmark')", 'S'
+Status: Pending

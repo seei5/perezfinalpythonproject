@@ -1,0 +1,6 @@
+Orderer: sam
+Shirts: 200
+Hats: 0
+Price: $650.0
+"('White', 'Smiley face')", 'M'
+Status: Pending

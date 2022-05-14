@@ -1,0 +1,6 @@
+Orderer: sam
+Shirts: 555
+Hats: 0
+Price: $1803.75
+"('Red', 'Plain')", 'M'
+Status: Pending
